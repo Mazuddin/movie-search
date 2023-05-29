@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie-search</title>
+
+  <link rel="stylesheet"
+        href="https://bootswatch.com/4/journal/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #312f2fdd;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      margin-bottom: 20px;
+    }
+
+    form {
+      margin-bottom: 15px;
+    }
+
+    .form-control {
+      width: 100%;
+      height: 40px;
+      font-size: 16px;
+      padding: 5px 10px;
+      border: 1px solid #04040432;
+      border-radius: 15px;
+    }
+
+    .btn-primary {
+      background-color: #fa0505;
+      color: #f8f7fb;
+      border: none;
+      outline: none;
+      border-radius: 11px;
+      padding: 4px 14px;
+      margin-bottom: -14px;
+      height: 31px;
+      cursor: pointer;
+    }
+
+      .Show {
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      display: contents;
+      align-items: center;
+    }
+
+    .Show img {
+      width: 100px;
+      height: auto;
+      margin-right: 20px;
+    }
+
+    .Show h5 {
+      margin: 0;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .Show small {
+      color: #666;
+    }
+
+    .Show-getEpisodes {
+      background-color: transparent;
+      color: #007bff;
+      border: 1px solid #007bff;
+      border-radius: 4px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .Show-getEpisodes:hover {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    #episodesArea {
+      margin-top: 20px;
+    }
+
+    #episodesList li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>TV Maze</h1>
+
+    <!-- Search Form -->
+    <form id="searchForm">
+      <input type="text" id="searchForm-term" class="form-control" placeholder="Search TV Shows">
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+
+    <!-- List of Shows -->
+    <div id="showsList"></div>
+
+    <!-- Episodes Area -->
+    <div id="episodesArea" style="display: none;">
+      <h3>Episodes</h3>
+      <ul id="episodesList"></ul>
+      
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      
+      <script src="app.js"> </script>
+    </div>
+  </div>
+
+  
+  
